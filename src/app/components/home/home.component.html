@@ -1,0 +1,18 @@
+<div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Employee Id</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let employee of employees'>
+                        <td>{{ employee.employeeName }}</td>
+                        <td>{{ employee.employeeId }}</td>
+                        <td>{{ employee.employeeTitle }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
