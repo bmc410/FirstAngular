@@ -5,13 +5,15 @@
                         <th>Name</th>
                         <th>Employee Id</th>
                         <th>Title</th>
+                        <th>Active</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let employee of employees'>
-                        <td>{{ employee.employeeName }}</td>
+                    <tr *ngFor='let employee of employees' >
+                        <td ng-if-start="false">{{ employee.employeeName }}</td>
                         <td>{{ employee.employeeId }}</td>
                         <td>{{ employee.employeeTitle }}</td>
+                        <td ng-if-end>{{ employee.employeeActInd }}</td>
                     </tr>
                 </tbody>
             </table>

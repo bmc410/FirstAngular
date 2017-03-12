@@ -2,6 +2,7 @@
     {
         "employeeId": 1,
         "employeeName": "Bill McCoy",
-        "employeeTitle": "Software Developer"
+        "employeeTitle": "Software Developer",
+        "employeeActInd": false
     }
 ]
