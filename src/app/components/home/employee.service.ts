@@ -15,17 +15,13 @@ export class EmployeeService {
 
     constructor(private _http: Http) { }
 
-    getEmployees(): Observable<IEmployee[]> {
+    getEmployees(): Observable<IEmployee> {
         return this._http.get(this._employeeUrl)
-            .map((response: Response) => <IEmployee[]> response.json())
+            .map((response: Response) => <IEmployee> response.json())
             .do(data => console.log('All: ' +  JSON.stringify(data)))
             .catch(this.handleError);
     }
 
-    getEmployee(id: number): Observable<IEmployee> {
-        return this.getEmployees()
-            .map((products: IEmployee[]) => products.find(p => p.employeeId === id));
-    }
 
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure

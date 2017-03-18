@@ -1,19 +1,24 @@
 <div class='table-responsive'>
             <table class='table'>
                 <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Employee Id</th>
-                        <th>Title</th>
-                        <th>Active</th>
+                    <tr style="text-align: center">
+                        <th style="text-align: center">Name</th>
+                        <th style="text-align: center">Employee Id</th>
+                        <th style="text-align: center">Title</th>
+                        <th style="text-align: center">Active</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let employee of employees' >
-                        <td ng-if-start="false">{{ employee.employeeName }}</td>
+                    <tr style="text-align: center" *ngFor='let employee of employees?.employees' >
+                        <td>{{ employee.employeeName }}</td>
                         <td>{{ employee.employeeId }}</td>
                         <td>{{ employee.employeeTitle }}</td>
-                        <td ng-if-end>{{ employee.employeeActInd }}</td>
+                        <td>
+                            <span ng-bind="employee.employeeActInd" (click)="employee.employeeActInd = !employee.employeeActInd; addprop(employee.employeeName,0)" class="glyphicon glyphicon-trash" [hidden]="employee.employeeActInd">
+                            </span>
+                            <input [hidden]="!employee.employeeActInd" (click)="addprop(employee.employeeName,1)" value="{{ employee.employeeId }}" type="checkbox" 
+                                    name="isActive" [(ngModel)]="employee.employeeActInd">
+                        </td>
                     </tr>
                 </tbody>
             </table>

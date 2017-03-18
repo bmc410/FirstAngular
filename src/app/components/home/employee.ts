@@ -1,6 +1,12 @@
 export interface IEmployee {
-    employeeId: number;
-    employeeName: string;
-    employeeTitle: string;
-    employeeActInd: boolean;
+    reportDate: string,
+    reportedBy: string,
+    employees: ISingleEmployee[];
+}
+
+export interface ISingleEmployee {
+    employeeId: number,
+    employeeName: string,
+    employeeTitle: string,
+    employeeActInd: boolean,
 }

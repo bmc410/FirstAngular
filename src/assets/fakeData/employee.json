@@ -1,8 +1,20 @@
-[
-    {
-        "employeeId": 1,
-        "employeeName": "Bill McCoy",
-        "employeeTitle": "Software Developer",
-        "employeeActInd": false
-    }
-]
+{
+    "reportDate": "03-14-2017",
+    "reportedBy": "Bill McCoy",
+    "employees":
+    [
+        {
+            "employeeId": 1,
+            "employeeName": "Bill McCoy",
+            "employeeTitle": "Software Developer",
+            "employeeActInd": true
+        },
+        {
+            "employeeId": 2,
+            "employeeName": "Terisa McCoy",
+            "employeeTitle": "Analyst",
+            "employeeActInd": true
+        }
+    ]
+
+}
